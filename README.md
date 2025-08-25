@@ -1,4 +1,4 @@
-**<h2>🥇 MySQl - WorkBench</h2>**
+**<h2>🥇 MySQL - WorkBench</h2>**
 
 ---
 
