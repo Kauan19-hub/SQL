@@ -29,8 +29,9 @@ git clone https://github.com/usuario/repositorio.git
 
 - MySQL;
 - VSCode;
-- WorkBench;
-- ANSI padrão.
+- WorkBench.
+
+###
 
 ---
 
