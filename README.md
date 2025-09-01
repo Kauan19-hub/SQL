@@ -6,7 +6,7 @@
 
 ###
 
-**1️⃣ Clone o repositório**
+1️⃣ Clone o repositório
 
 ###
 ```bash
@@ -14,8 +14,9 @@ git clone https://github.com/usuario/repositorio.git
 ```
 ###
 
-**2️⃣ Abra o gerenciador de Banco De Dados (MySQL, WorkBench, DBeaver...)**<br>
-**3️⃣ Copie, e rode o script `script.sql`**
+2️⃣ Abra o gerenciador de Banco De Dados (MySQL, WorkBench, DBeaver...)<br>
+
+3️⃣ Copie, e rode o script `script.sql`
 
 ---
 
