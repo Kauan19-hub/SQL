@@ -18,7 +18,7 @@ git clone https://github.com/Kauan19-hub/DataBase.git
 
 ###
 
-(MySQL, WorkBench, DBeaver...)
+`MySQL`, `WorkBench`, `DBeaver`...
 
 ###
 
