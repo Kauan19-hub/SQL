@@ -2,21 +2,27 @@
 
 ---
 
-**<h2>🖥️ Como Utilizar</h2>**
+**<h2>🖥️ How to Use</h2>**
 
 ###
 
-1️⃣ Clone o repositório
+1️⃣ Clone the repository:
 
 ###
-```bash
-git clone https://github.com/usuario/repositorio.git
+```powershell 
+git clone https://github.com/Kauan19-hub/DataBase.git
 ```
 ###
 
-2️⃣ Abra o gerenciador de Banco De Dados (MySQL, WorkBench, DBeaver...)<br>
+2️⃣ Open the Database Manager:
 
-3️⃣ Copie, e rode o script `script.sql`
+###
+
+(MySQL, WorkBench, DBeaver...)
+
+###
+
+3️⃣ Copy, and play the script `script.sql`
 
 ---
 
