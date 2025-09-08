@@ -69,49 +69,53 @@ CREATE TABLE Comentarios (
 
 );
 
--- Inserir 10 usuários
-/*
-INSERT INTO Usuarios (Nome, Idade, Cidade, Email, NomeUser, Senha, Tipo) VALUES
-('João Silva', 25, 'São Paulo', 'joao@gmail.com', 'joaos', '1234', 'Estudante'),
-('Maria Lima', 30, 'Rio de Janeiro', 'maria@gmail.com', 'marial', 'abcd', 'Estudante'),
-('Carlos Souza', 28, 'Belo Horizonte', 'carlos@gmail.com', 'carloss', 'senha1', 'Estudante'),
-('Ana Beatriz', 22, 'Curitiba', 'ana@gmail.com', 'anab', 'senha2', 'Estudante'),
-('Rafael Mendes', 35, 'Fortaleza', 'rafael@gmail.com', 'rafaelm', 'senha3', 'Adm'),
-('Juliana Castro', 27, 'Recife', 'juliana@gmail.com', 'julianac', 'senha4', 'Estudante'),
-('Eduardo Alves', 24, 'Brasília', 'eduardo@gmail.com', 'eduardoa', 'senha5', 'Estudante'),
-('Patrícia Nogueira', 29, 'Salvador', 'patricia@gmail.com', 'patrician', 'senha6', 'Adm'),
-('Fernanda Rocha', 31, 'Manaus', 'fernanda@gmail.com', 'fernandar', 'senha7', 'Estudante'),
-('Vinícius Torres', 26, 'Belém', 'vinicius@gmail.com', 'viniciust', 'senha8', 'Estudante');
+-- Insert dos 10 usuários
+INSERT INTO Usuarios (Nome, Cidade, Idade, Email, NomeUsuario, Senha, Tipo)
+ 
+VALUES 
+('Joãozinho', 20, 'Campinas', 'jão@gmail.com', 'Joooãos', '456', 'Mestrado'),
+('Amandinha', 23, 'Bahia', 'amanda12@gmail.com', 'EuAmanda', '123', 'Atriz'),
+('Carlos Santos', 36, 'Fortaleza', 'CS@gmail.com', 'Carlito', '246', 'Estudante'),
+('Enidy Batista', 18, 'São Paulo', 'enidyy33@gmail.com', 'Eniidy7', '111', 'Estudante'),
+('Ayla Souza', 30, 'Campinas', 'ayla290@gmail.com', 'AylaUser', '942', 'Doutorado'),
+('Ricardo Costa', 18, 'Itapira', 'ricardinho12@gmail.com', 'Ricardin25', '205', 'Bacharel'),
+('Miguel Amendoim', 20, 'Acre', 'amendoim29@gmail.com', 'Amendoim8', '222', 'Estudante'),
+('Renato Silva', 27, 'Campinas', 'silva@gmail.com', 'Renatinho', '278', 'Mestrado'),
+('Marcos Sales', 29, 'Santa Catarina', 'marcos@gmail.com', 'Marcos10', '150', 'Estudante'),
+('Helena Batista', 18, 'Campinas', 'batista@gmail.com', 'Heleeeena', '789', 'Estudante');
 
--- Inserir 7 categorias
+-- Insert das 7 categorias
 INSERT INTO Categorias (Nome) VALUES
 ('Esportes'),
-('Tecnologia'),
 ('Arte'),
-('Música'),
-('Educação'),
+('Tecnologia'),
 ('Voluntariado'),
-('Ciência');
+('Aprendiz Técnico'),
+('Educação'),
+('Música'),
+('Ciências da Natureza'),
+('Ciências da Computação'),
+('Ciências Humanas');
 
--- Inserir 8 atividades
-INSERT INTO Atividades (Titulo, Descricao, Datas, Locas, CategoriaID, CriadorID) VALUES
-('Corrida no Parque', 'Evento de corrida de 5km.', '2025-09-15', 'Parque Ibirapuera', 1, 1),
-('Hackathon Universitário', 'Maratona de programação de 24h.', '2025-09-20', 'USP', 2, 2),
-('Oficina de Pintura', 'Aula gratuita de pintura artística.', '2025-09-18', 'Centro Cultural SP', 3, 3),
-('Concerto de Violão', 'Apresentação ao vivo de músicos locais.', '2025-09-22', 'Teatro Municipal', 4, 4),
-('Palestra sobre IA', 'Discussão sobre Inteligência Artificial.', '2025-09-25', 'Unicamp', 2, 5),
-('Aula de Dança', 'Dança de salão para iniciantes.', '2025-09-28', 'Ginásio Municipal', 4, 6),
-('Feira de Ciências', 'Exposição de projetos estudantis.', '2025-09-30', 'Colégio Estadual', 7, 7),
-('Mutirão de Limpeza', 'Ação voluntária de limpeza urbana.', '2025-09-19', 'Praia de Boa Viagem', 6, 8);
+-- Insert das 8 atividades
+INSERT INTO Atividades (Descricao, Titulo,  Datas, Locais, CategoriaID, CriadorID) VALUES
+('Corridas', 'Evento de corrida de 10km', '10.09.2025', 'Parque Ibirapuera', 1, 1),
+('Hackathon Universitário', 'Maratona de programação', '07.08.2025', 'UNIVESP', 2, 2),
+('Oficinas', 'Aula gratuita artística', '18.09.2025', 'Centro Cultural', 3, 3),
+('Ciências', 'Natureza, Humanas e Computação', '12.10.2025', 'UNICAMP', 4, 4),
+('I.A', 'Inteligência Artificial.', '01.11.2025', 'Anfiteatro Mackenzie', 2, 5),
+('Danças', 'Dança Iniciante ao Avançado', '21.12.2025', 'Ginásio Municipal', 4, 6),
+('Combate Artes Marciais', 'Mix de Artes Marciais', '10.01.2026', 'Centro de Combate', 7, 7),
+('Autoconfiança', 'O melhor para você', '17.01.2026', 'Praia de Guarujá', 6, 8);
 
--- Inserir 4 participações
+-- Insert das 4 participações
 INSERT INTO Participacoes (AtividadeID, UsuarioID) VALUES
 (1, 2),
 (2, 3),
 (3, 1),
 (4, 5);
 
--- Inserir 5 conexões
+-- Insert das 5 conexões
 INSERT INTO Conexoes (UsuarioID1, UsuarioID2) VALUES
 (1, 2),
 (1, 3),
@@ -119,48 +123,46 @@ INSERT INTO Conexoes (UsuarioID1, UsuarioID2) VALUES
 (3, 5),
 (4, 6);
 
--- Inserir 9 comentários
+-- Insert dos 9 comentários
 INSERT INTO Comentarios (AtividadeID, UsuarioID, Comentario) VALUES
-(1, 2, 'Muito animado para a corrida!'),
-(2, 3, 'Vai ser um ótimo hackathon!'),
-(3, 4, 'Adoro pintura!'),
-(4, 5, 'Show imperdível.'),
-(5, 6, 'Ansioso pela palestra.'),
-(6, 7, 'Nunca dancei, vai ser legal!'),
-(7, 8, 'Levando meu projeto!'),
-(8, 9, 'Bela iniciativa.'),
-(1, 10, 'Vamos correr juntos!');
+(1, 2, 'Estou ansioso pra correr!'),
+(2, 3, 'Vai ser um evento muito legal!'),
+(3, 4, 'Adoro desenhos e pinturas!'),
+(4, 5, 'Esse show é imperdível!'),
+(5, 6, 'Mal posso esperare pela palestra!'),
+(6, 7, 'Sempre quis aprender a dançar, vai ser legal!'),
+(7, 8, 'Levando o meu projeto!'),
+(8, 9, 'Ótimo evento para desenolver habilidades!'),
+(1, 10, 'Bora cuidar da nossa saúde mental!');
 
--- Inserir mais 10 usuários
+-- Insert de mais 10 usuários
 INSERT INTO Usuarios (Nome, Idade, Cidade, Email, NomeUser, Senha, Tipo) VALUES
-('Larissa Melo', 21, 'São Luís', 'larissa@gmail.com', 'larissam', 'senha9', 'Estudante'),
-('Marcelo Dias', 33, 'Florianópolis', 'marcelo@gmail.com', 'marcelod', 'senha10', 'Estudante'),
-('Tatiane Gomes', 26, 'Porto Alegre', 'tatiane@gmail.com', 'tatianeg', 'senha11', 'Adm'),
-('Roberto Lima', 38, 'João Pessoa', 'roberto@gmail.com', 'robertol', 'senha12', 'Estudante'),
-('Camila Andrade', 29, 'Teresina', 'camila@gmail.com', 'camilaa', 'senha13', 'Estudante'),
-('Bruno Ferreira', 30, 'Natal', 'bruno@gmail.com', 'brunof', 'senha14', 'Estudante'),
-('Helena Barbosa', 27, 'Campo Grande', 'helena@gmail.com', 'helenab', 'senha15', 'Estudante'),
-('Gustavo Ramos', 34, 'Aracaju', 'gustavo@gmail.com', 'gustavor', 'senha16', 'Adm'),
-('Amanda Costa', 25, 'Maceió', 'amanda@gmail.com', 'amandac', 'senha17', 'Estudante'),
-('Lucas Oliveira', 32, 'Cuiabá', 'lucas@gmail.com', 'lucaso', 'senha18', 'Estudante');
+('Larissa Santos', 20, 'São Carlos', 'larissa@gmail.com', 'Larissam', 'senha9', 'Estudante'),
+('Marcelo Perez', 33, 'Florianópolis', 'perez@gmail.com', 'Marceeeelo', 'senha10', 'Bacharel'),
+('Tatiane Pereira', 26, 'Campinas', 'tatiane@gmail.com', 'Taty1', 'senha11', 'Admin'),
+('Roberto Costa', 38, 'Itapira', 'roberto12@gmail.com', 'Robertol', 'senha12', 'Estudante'),
+('Camila Andrade', 29, 'Campinas', 'camila@gmail.com', 'Andrade18', 'senha13', 'Pós-Graduação'),
+('Bruno Meirelez', 30, 'Porto Seguro', 'bruno@gmail.com', 'Brunof', 'senha14', 'Graduação'),
+('Helena Santos', 27, 'Campos do Jordão', 'helena@gmail.com', 'Helena5', 'senha15', 'Estudante'),
+('Gustavo Azevedo', 34, 'Campinas', 'gustavo@gmail.com', 'Guto3', 'senha16', 'Admin'),
+('Amanda Ferreira', 25, 'Maceió', 'amanda@gmail.com', 'Amanda19', 'senha17', 'Graduação'),
+('Lucas de Oliveira', 32, 'Joinville', 'lucas@gmail.com', 'Luucaso', 'senha18', 'Bacharel');
 
--- Inserir mais 5 atividades com mais detalhes e criador específico (usuário 5)
+-- Insert de mais 5 atividades com mais detalhes e criador específico
 INSERT INTO Atividades (Titulo, Descricao, Datas, Locas, CategoriaID, CriadorID) VALUES
-('Curso de Python', 'Curso introdutório à linguagem Python.', '2025-10-01', 'Sala 101 - IFSP', 2, 5),
-('Trilha na Serra', 'Caminhada ecológica com guia.', '2025-10-03', 'Serra da Cantareira', 1, 5),
-('Oficina de Robótica', 'Montagem de robôs com kits Lego.', '2025-10-05', 'SENAI', 2, 5),
-('Festival de Bandas', 'Bandas locais se apresentam ao ar livre.', '2025-10-08', 'Praça Central', 4, 5),
-('Dia do Livro', 'Feira de troca e doação de livros.', '2025-10-10', 'Biblioteca Pública', 5, 5);
+('Curso Front-End', 'Front-End do básico ao deploy', '19.09.2025', 'IFSP', 2, 5),
+('Programação e Robótica', 'Lógica de programação e Robôs', '21.09.2025', 'UFSCAR', 1, 5),
+('Oficina Mecânica', 'Mecânica para iniciantes', '05.10.2025', 'Escola SENAI', 2, 5),
+('Festival de Bandas', 'Bandas locais', '18.11.2025', 'Praça Taquaral', 4, 5),
+('Feira do Livro', 'Feira de troca e doação de livros', '09.12.2025', 'Biblioteca Campinas - Bosque', 5, 5);
 
-
-
--- Selecionar todos os registros da tabela Participações
+-- Select de todos os registros da tabela das Participações
 SELECT * FROM Participacoes;
 
--- Selecionar todas as conexões feitas entre usuários
+-- Select de todas as conexões feitas entre os usuários
 SELECT * FROM Conexoes;
 
--- Selecionar todos os comentários feitos em atividades
+-- Select de todos os comentários criados em atividades
 SELECT * FROM Comentarios;
 
 -- Nome e Cidade de todos os usuários
