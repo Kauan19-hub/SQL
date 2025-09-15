@@ -4,10 +4,11 @@ USE nome;
 
 DROP DATABASE nome; 
 
+-- Rename de Tabela
 CREATE DATABASE code_example;
 RENAME TABLE nome.usuario TO exemplo.usuario;
 
-
+-- Deletar uma tabela e criar uma tabela
 DROP TABLE nome.usuario;
 CREATE TABLE usuario (
   
