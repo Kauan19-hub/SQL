@@ -23,7 +23,7 @@ CREATE TABLE curso (
 	
 ) ENGINE = InnoDB;
 
--- Tabela de Incricao
+-- Tabela de Incrição
 CREATE TABLE inscricao (
 	idInscricao INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,

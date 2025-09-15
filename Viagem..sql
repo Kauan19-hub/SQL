@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS viagem;
 
 USE viagem;
 
--- Tabela Cliente
+-- Tabela de Cliente
 CREATE TABLE Cliente (
 	idCliente INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE Cliente (
     
 );
 
--- Tabela Destino
+-- Tabela de Destino
 CREATE TABLE Destino (
 	idDestino INT AUTO_INCREMENT  PRIMARY KEY,
     cidade VARCHAR(50) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE Destino (
     
 );
 
--- Tabela Pacote Viagem
+-- Tabela do Pacote de Viagem
 CREATE TABLE Pacote_Viagem (
 	idPacote INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(15) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE Pacote_Viagem (
     
 );
 
--- Tabela Reserva
+-- Tabela de Reserva
 CREATE TABLE Reserva (
 	idReserva INT AUTO_INCREMENT PRIMARY KEY,
     idCliente INT NOT NULL,

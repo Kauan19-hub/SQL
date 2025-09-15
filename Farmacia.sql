@@ -2,6 +2,7 @@ CREATE DATABASE farmácia;
 
 USE farmacia;
 
+-- Tabela de Farmácia
 CREATE TABLE Farmácia (
 	idFarmácia INT AUTO_INCREMENT PRIMARY KEY,
     CNPJ VARCHAR(14) NOT NULL,
@@ -12,6 +13,7 @@ CREATE TABLE Farmácia (
     
 );
 
+-- Tabela de Funcionário
 CREATE TABLE Funcionário (
 	idFuncionário INT AUTO_INCREMENT PRIMARY KEY,
     RG VARCHAR(10) NOT NULL,
@@ -23,10 +25,11 @@ CREATE TABLE Funcionário (
     
 );
 
+-- Tabela de Produto
 CREATE TABLE Produto (
 	idProduto INT AUTO_INCREMENT PRIMARY KEY,
     código INT,
-    preço DECIMAL(10,2),
+    preco DECIMAL(10,2),
     id_Farmácia INT,
     FOREIGN KEY (id_Farmácia) REFERENCES Farmácia(idFarmácia)
 );
