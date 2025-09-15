@@ -10,6 +10,7 @@ CREATE TABLE usuario (
     senha_hash CHAR(65) NOT NULL,
     tipo ENUM('ALUNO', 'MENTOR', 'ADMIN'),
     data_cadastro DATETIME
+	
 ) ENGINE = InnoDB;
 
 -- Tabela do Curso
@@ -19,6 +20,7 @@ CREATE TABLE curso (
     descricao TEXT,
     nivel ENUM('AVANCADO', 'INTERMEDIARIO', 'INICIANTE'),
     data_cadastro DATETIME
+	
 ) ENGINE = InnoDB;
 
 -- Tabela de Incricao
@@ -30,6 +32,7 @@ CREATE TABLE inscricao (
     data_inscricao DATETIME,
     FOREIGN KEY (id_usuario) REFERENCES usuario(idUsuario),
     FOREIGN KEY (id_curso) REFERENCES curso(idCurso)
+	
 ) ENGINE = InnoDB;
 
 -- Tabela de Auditoria
@@ -42,6 +45,7 @@ CREATE TABLE auditoria (
     observacoes TEXT,
     operacao ENUM('INSERT', 'UPDATE', 'DELETE'),
     FOREIGN KEY (id_usuario) REFERENCES usuario(idUsuario)
+	
 ) ENGINE = InnoDB;
 
 
