@@ -1,4 +1,5 @@
 CREATE DATABASE nome;
+
 USE nome;
 
 DROP DATABASE nome; 
