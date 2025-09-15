@@ -1,7 +1,6 @@
 CREATE DATABASE nome;
 USE nome;
 
-
 DROP DATABASE nome; 
 
 -- Rename de Tabela
