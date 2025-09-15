@@ -14,16 +14,5 @@ git clone https://github.com/Kauan19-hub/DataBase.git
 ```
 ###
 
-2️⃣ Open the Database Manager:
-
-###
-
-`MySQL`, `WorkBench`, `DBeaver`...
-
-###
-
-3️⃣ Copy, and play the script `script.sql`
-
----
 
 
