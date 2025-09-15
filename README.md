@@ -1,12 +1,10 @@
 **<h2>🥇 MySQL - WorkBench</h2>**
 
----
-
-**<h2>🖥️ How to Use</h2>**
+**🖥️ How to Use?**
 
 ###
 
-1️⃣ Clone the repository:
+✅- Clone the repository:
 
 ###
 ```powershell 
