@@ -1,6 +1,6 @@
-CREATE DATABASE Escola_Bosch
+CREATE DATABASE Escola_Bosch;
 
-Use Escola_Bosch
+USE Escola_Bosch;
 
 -- Tabela dos Professores
 CREATE TABLE Professor (
@@ -47,9 +47,9 @@ DELETE FROM Professor WHERE id = 1;
 
 -- Inserir a Turma
 INSERT INTO Turma(num_identificacao, id_professor, nome)
-VALUES (101, "Back-End", 1)
+VALUES (101, "Back-End", 1);
 
---Consultar a Turma
+-- Consultar a Turma
 SELECT * FROM Turma WHERE id_professor = 1;
 
 -- Modificar os Dados da Turma 
@@ -74,3 +74,40 @@ WHERE id = 1;
 
 -- Deletar as Atividades
 DELETE FROM Atividades WHERE id = 1;
+
+-- Criação do Novo Professor
+INSERT INTO Professor (nome, email) VALUES ('Nome do Professor', 'meunomeprofessor@email.com');
+
+-- Criação das Novas Turmas
+INSERT INTO turmas (nome, professor_id) VALUES ('Nome da Turma', ID_PROFESSOR);
+
+-- Criação das Novas Atividades
+INSERT INTO atividades (nome, descricao, turma_id) VALUES ('Nome da Atividade', 'Descrição da atividade', ID_TURMA);
+
+-- Consultar as Turmas
+SELECT * FROM turmas WHERE id = ID_TURMA
+
+AND NOT EXISTS (
+    SELECT 1 FROM turmas WHERE professor_id = ID_PROFESSOR
+);
+
+DELETE FROM Professor
+WHERE id = ID_PROFESSOR;
+
+INSERT INTO turmas (nome, professor_id) VALUES ('Nome da Turma', ID_PROFESSOR);
+
+INSERT INTO Atividades (nome, descricao, turma_id) VALUES ('Nova Atividade', 'Descrição...', ID_TURMA);
+
+SELECT * FROM atividades WHERE turma_id = ID_TURMA;
+
+-- Atualização de Turmas
+UPDATE Turma SET professor_id = ID_PROFESSOR WHERE id = ID_TURMA;
+
+-- Seleção de Informações
+SELECT 
+    turmas.id AS turma_id,
+    turmas.nome AS nome_turma,
+    professores.nome AS nome_professor,
+    professores.email AS email_professor
+FROM turmas
+JOIN professores ON turmas.professor_id = professores.id;
